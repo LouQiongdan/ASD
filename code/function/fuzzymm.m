@@ -2,14 +2,14 @@ function [R] = fuzzymm(A,B)
 
 [m,n]=size(A);[q,p]=size(B);
 if n~=q
-    disp('µÚÒ»¸ö¾ØÕóµÄÁĞÊıºÍµÚ¶ş¸ö¾ØÕóµÄĞĞÊı²»ÏàÍ¬£¡');
+    disp('ç¬¬ä¸€ä¸ªçŸ©é˜µçš„åˆ—æ•°å’Œç¬¬äºŒä¸ªçŸ©é˜µçš„è¡Œæ•°ä¸ç›¸åŒï¼');
 else
     R=zeros(m,p);
 for k =1:m    
     for j=1:p
         temp=[];
         for i =1:n
-            Min = min(A(k,i),B(i,j));
+            
             temp=[temp Min]; 
         end
         R(k,j)=max(temp);
